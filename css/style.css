@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  min-height: 300px;
+}
+
+.main-game {
+  display: flex;
+  flex-direction: row;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFdBQVU7RUFDVixpQkFBZ0I7QUNDcEI7O0FERUE7RUFDSSxhQUFZO0VBQ1osbUJBQW1CO0FDQ3ZCIiwiZmlsZSI6InN0eWxlLmNzcyJ9 */
