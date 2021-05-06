@@ -6,16 +6,50 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <section class='container'>
-            <div class='header'>
+        <section class='header'>
+            <div class='center header'>
                 <h1> Tibijska kostka </h1>
             </div>
         </section>
         <section class='container'>
-            <div class='main-game'>
-                <button class=''> ROLL </button>
-                <p> 100$ </p>
+            <div class='center main-game'>
+                <p> Your money: 100$ </p>
+                <p> How much you want to bet?</p>
+                    <div class='row'>
+                         <input type='text' placeholder='enter bet amount!'>
+                        <p>$</p>
+                 </div>
             </div>
+            <div class='center chooseNr'>
+               <p>Choose your number: </p>
+               <label>
+                    <input type='radio' name="Your choice" id='playerChoice'> 1 
+                </label>
+                <label>
+                    <input type='radio' name="Your choice" id='playerChoice'> 2 
+                </label>
+                <label>
+                   <input type='radio' name="Your choice" id='playerChoice'> 3
+                </label>
+                <label>
+                    <input type='radio' name="Your choice" id='playerChoice'> 4
+                </label>
+                <label>
+                    <input type='radio' name="Your choice" id='playerChoice'> 5
+                </label>
+                <label>
+                    <input type='radio' name="Your choice" id='playerChoice'> 6 
+                </label>
+            </div>
+        </section>
+        <section class='container'>
+            <div class='center'>
+                <button class='button-roll' id='roll-button'> ROLL </button>
+            </div>
+        </section>
+
+        <section class='container'>
+            <div class='randomNumberIs' id='messages'> Roll your number! </div>
         </section>
 
 
