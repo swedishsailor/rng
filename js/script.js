@@ -1,19 +1,50 @@
 'use strict';
 
+        let nr,
+        bet,
+        rollButton = document.getElementById('roll-button'),
+        playerChoice = document.getElementById('playerChoice'),
+        chosenNr = playerChoice.getAttribute('value'),
+        goldAmount = document.getElementById('goldAmount'),
+        balance = document.getElementById('playerMoney'),
+        actualBalance = '80';
+        balance.innerHTML = actualBalance + '$';
+        
 
            /*  FUNCTIONS   */
 
-           function highLow (goldAmount) {
+           function highLow () {
                
-                goldAmount = document.getElementById('goldAmount');
+               
            }
-           console.log(playerChoice);
-           console.log(goldAmount);
-           goldAmount.addEventListener('click');
+          
+           function getPlayerChoice(/*playerChoice, chosenNr*/){
+           
+             if (chosenNr = 'nr1') {
+                 nr = '1';
+             } else if (chosenNr = 'nr2'){
+                 nr ='2';
+             } else if (chosenNr = 'nr3'){
+                nr ='3';
+            } else if (chosenNr = 'nr4'){
+                nr ='4';
+            } else if (chosenNr = 'nr5'){
+                nr ='5';
+            } else {
+                nr ='6';
+            }
+             return nr;
+           }
+              
+     
 
-           function getPlayerChoice(playerChoice){
-            playerChoice = document.getElementById('playerChoice');
+           function getGoldAmount (goldAmount){
+         //   let enteredMoney = goldAmount.getAttribute('value');
+          //  console.log(enteredMoney);
            }
+
+           goldAmount.addEventListener('click', function(){getGoldAmount(goldAmount)});
+           console.log(goldAmount);
 
 
 function roll () {
@@ -38,7 +69,10 @@ function clearMessages(){
 
                 /* METHODS   */
 
-let rollButton = document.getElementById('roll-button');
 
 rollButton.addEventListener('click', function(){roll()});
-
+playerChoice.addEventListener('click', function(){getPlayerChoice(nr)});
+goldAmount.addEventListener('change', bet)
+console.log(nr);
+console.log(chosenNr);
+console.log(bet);
