@@ -32,7 +32,13 @@
     font-size:24px;
     height:76px;
     width:144px;
+    background-color: #9980FA;
 }
+
+.button-roll:hover{
+    opacity:0.2;
+}
+
 
 .chooseNr{
     font-size: 24px;
@@ -56,4 +62,8 @@ input {
 .row {
     flex-direction: row;
     display:flex;
+}
+
+.oneTapResult {
+    margin-top:-43px;
 }
