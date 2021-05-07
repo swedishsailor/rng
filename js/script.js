@@ -3,10 +3,17 @@
 
            /*  FUNCTIONS   */
 
-           function highLow (playerChoice, goldAmount) {
-                playerChoice = document.getElementById('playerChoice');
+           function highLow (goldAmount) {
+               
+                goldAmount = document.getElementById('goldAmount');
            }
            console.log(playerChoice);
+           console.log(goldAmount);
+           goldAmount.addEventListener('click');
+
+           function getPlayerChoice(playerChoice){
+            playerChoice = document.getElementById('playerChoice');
+           }
 
 
 function roll () {
