@@ -2,14 +2,12 @@
 
         let nr,
         bet,
-        rollButton = document.getElementById('roll-button'),
-        playerChoice = document.getElementById('playerChoice'),
-        chosenNr = playerChoice.getAttribute('value'),
+        actualBalance = '80',
+         rollButton = document.getElementById('roll-button'),
+        playerChoice = document.querySelectorAll('#playerChoice'),
         goldAmount = document.getElementById('goldAmount'),
-        balance = document.getElementById('playerMoney'),
-        actualBalance = '80';
-        balance.innerHTML = actualBalance + '$';
-        
+        balance = document.getElementById('playerMoney');
+       
 
            /*  FUNCTIONS   */
 
@@ -18,25 +16,42 @@
                
            }
           
-           function getPlayerChoice(/*playerChoice, chosenNr*/){
-           
-             if (chosenNr = 'nr1') {
-                 nr = '1';
-             } else if (chosenNr = 'nr2'){
-                 nr ='2';
-             } else if (chosenNr = 'nr3'){
-                nr ='3';
-            } else if (chosenNr = 'nr4'){
-                nr ='4';
-            } else if (chosenNr = 'nr5'){
-                nr ='5';
-            } else {
-                nr ='6';
-            }
-             return nr;
-           }
               
-     
+           function number2() {
+            nr = 2;
+            console.log('Numer wybrany to: ' + nr);
+            
+        }
+
+        function number3() {
+            nr = 3;
+            console.log('Numer wybrany to: ' + nr);
+            
+        }
+
+        function number4() {
+            nr = 4;
+            console.log('Numer wybrany to: ' + nr);
+            
+        }
+
+        function number5() {
+            nr = 5;
+            console.log('Numer wybrany to: ' + nr);
+            
+        }
+
+        function number6() {
+            nr = 6;
+            console.log('Numer wybrany to: ' + nr);
+            
+        }
+
+        function number1() {
+            nr = 1;
+            console.log('Numer wybrany to: ' + nr);
+            
+        }
 
            function getGoldAmount (goldAmount){
          //   let enteredMoney = goldAmount.getAttribute('value');
@@ -70,9 +85,16 @@ function clearMessages(){
                 /* METHODS   */
 
 
+ balance.innerHTML = actualBalance + '$';
 rollButton.addEventListener('click', function(){roll()});
-playerChoice.addEventListener('click', function(){getPlayerChoice(nr)});
-goldAmount.addEventListener('change', bet)
+playerChoice[1].addEventListener('click', function(){number2(nr)});
+playerChoice[2].addEventListener('click', function(){number3(nr)});
+playerChoice[3].addEventListener('click', function(){number4(nr)});
+playerChoice[4].addEventListener('click', function(){number5(nr)});
+playerChoice[5].addEventListener('click', function(){number6(nr)});
+playerChoice[0].addEventListener('click', function(){number1(nr)});
+goldAmount.addEventListener('text', bet)
 console.log(nr);
-console.log(chosenNr);
+//console.log(chosenNr);
 console.log(bet);
+console.log(playerChoice);
