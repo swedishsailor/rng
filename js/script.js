@@ -1,7 +1,7 @@
 'use strict';
 
         let nr,
-        bet,
+        gold = 0,
         randomNumber,
         actualBalance = '80',
          rollButton = document.getElementById('roll-button'),
@@ -79,6 +79,14 @@ function roll () {
     return  randomNumber;
 }
 
+function bet(gold) {
+    let goldId;
+    goldId = document.getElementById('goldAmount');
+    goldId.innerHTML=gold;
+    console.log(gold);
+    return gold;
+}
+
 
 function printMessage(msg) {
     var div = document.createElement('div');
@@ -112,8 +120,7 @@ playerChoice[3].addEventListener('click', function(){number4(nr)});
 playerChoice[4].addEventListener('click', function(){number5(nr)});
 playerChoice[5].addEventListener('click', function(){number6(nr)});
 playerChoice[0].addEventListener('click', function(){number1(nr)});
-goldAmount.addEventListener('text', bet)
+goldAmount.addEventListener('change', function(){bet()});
 console.log(nr);
 //console.log(chosenNr);
-console.log(bet);
 console.log(playerChoice);
