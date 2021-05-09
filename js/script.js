@@ -1,9 +1,9 @@
 'use strict';
 
         let nr,
-        gold = 0,
+        gold,
         randomNumber,
-        actualBalance = '80',
+        actualBalance = 80,
          rollButton = document.getElementById('roll-button'),
         playerChoice = document.querySelectorAll('#playerChoice'),
         goldAmount = document.getElementById('goldAmount'),
@@ -12,9 +12,16 @@
 
            /*  FUNCTIONS   */
 
+           function bet() {
+            gold = document.getElementById('goldAmount').value;
+            console.log(gold);
+        }
+
            function oneTap () {
+              
                if ((nr == 1 && randomNumber == 1) || (nr == 2 && randomNumber == 2)|| (nr == 3 && randomNumber == 3)|| (nr ==4 && randomNumber ==4)|| (nr == 5 && randomNumber == 5)|| (nr == 6 && randomNumber == 6)) {
                     console.log('Wygrałeś warjacie, esa');
+                    actualBalance = actualBalance + gold*5;
                     clearMessages2();
                     printMessage2('D: You won!');
                } else {
@@ -22,7 +29,7 @@
                    clearMessages2();
                    printMessage2('Buuuda, try again');
                }
-               
+               balance.innerHTML = 'Your balance: ' + actualBalance + '$';
            }
           
                                 /* Łopatologic Numbers xd */
@@ -72,21 +79,15 @@
 
 
 function roll () {
+    actualBalance = actualBalance - gold;
+    console.log(actualBalance);
     randomNumber  = Math.floor(Math.random()*6 + 1);
     console.log(randomNumber);
     clearMessages();
     printMessage('Rolled number is: ' + randomNumber + '!');
-    return  randomNumber;
+    balance.innerHTML = 'Your balance: ' + actualBalance + '$';
+    return  randomNumber, actualBalance;
 }
-
-function bet(gold) {
-    let goldId;
-    goldId = document.getElementById('goldAmount');
-    goldId.innerHTML=gold;
-    console.log(gold);
-    return gold;
-}
-
 
 function printMessage(msg) {
     var div = document.createElement('div');
@@ -111,7 +112,7 @@ function clearMessages2(){
                 /* METHODS   */
 
 
- balance.innerHTML = 'Your balance: ' + actualBalance + '$';
+balance.innerHTML = 'Your balance: ' + actualBalance + '$';
 rollButton.addEventListener('click', function(){roll()});
 rollButton.addEventListener('click', function(){oneTap()});
 playerChoice[1].addEventListener('click', function(){number2(nr)});
