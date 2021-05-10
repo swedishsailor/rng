@@ -1,3 +1,7 @@
+body {
+    background-color: #0d3088;
+}
+
 .container {
     width:100%;
     min-height:200px;
@@ -17,6 +21,7 @@
 
     input {
         height:30px;
+        width:178px;
         font-size: 22px;
         margin-top:35px;
         margin-right:6px;
@@ -26,6 +31,7 @@
 .randomNumberIs {
     font-size:48px;
     text-align: center;
+    margin-top:-55px;
 }
 
 .button-roll {
@@ -33,6 +39,7 @@
     height:76px;
     width:144px;
     background-color: #9980FA;
+    margin-top: 10px;
 }
 
 .button-roll:hover{
@@ -66,4 +73,16 @@ input {
 
 .oneTapResult {
     margin-top:-43px;
+}
+
+#playerMoney {
+    color:#44bd32;
+}
+
+.resultLose {
+    color:#e84118;
+}
+
+.resultWin {
+    color:#4cd137;
 }
