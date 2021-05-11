@@ -1,5 +1,9 @@
 body {
-    background-color: #0d3088;
+    //background-image: url(https://i.postimg.cc/cJjjpWfD/Szablon-Wody.png);
+   // background-image: url(https://i.postimg.cc/xC8fR9nt/testkostka.png);
+    background-image:url(https://i.postimg.cc/s2NXbMnt/testkostka2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .container {
@@ -21,7 +25,7 @@ body {
 
     input {
         height:30px;
-        width:178px;
+        width:188px;
         font-size: 22px;
         margin-top:35px;
         margin-right:6px;
@@ -63,7 +67,7 @@ input {
     height:50px;
     text-align:center;
     font-size:39px;
-    margin-top:5px;
+    margin-top:-25px;
 }
 
 .row {
@@ -76,13 +80,65 @@ input {
 }
 
 #playerMoney {
-    color:#44bd32;
+    color:#22ff00;
+    font-style:bold;
 }
 
 .resultLose {
-    color:#e84118;
+    color:#c70000;
 }
 
 .resultWin {
-    color:#4cd137;
+    color:#22ff00;
+}
+
+.chooseYourNumber {
+
+    display: flex;
+
+    p {
+        font-size:22px;
+    }
+   
+    input {
+
+        background-color: #9980FA;
+        color:#e84118;
+        background: linear-gradient(to right bottom, hsl(154, 97%, 62%), hsl(225, 97%, 62%));
+        height:22px;
+        width:22px;
+        opacity:0;
+
+
+        :checked {
+            background: linear-gradient(to right bottom, hsl(154, 97%, 62%), hsl(225, 97%, 62%));
+            color:red;
+            background-color: red;
+            }
+        }
+
+        label {
+            font-size:24px;
+            color:#fff;
+            display: flex;
+
+        :checked + .radio-design{
+            background: linear-gradient(to right bottom, hsl(154, 97%, 62%), hsl(225, 97%, 62%));
+           background: radial-gradient( #192a56,#00a8ff 51%);
+        }
+            
+        }
+
+    .radio-design {
+        display: block;
+        border-radius: 50%;
+        border:1px solid black;
+         width:22px;
+        height:22px;
+        background: #7f8fa6;
+        margin-left:5px;
+        position:absolute;
+
+    }
+
 }

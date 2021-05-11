@@ -1,5 +1,7 @@
 'use strict';
 
+            /*    Variables  */
+
         let nr,
         gold,
         randomNumber,
@@ -12,6 +14,14 @@
 
            /*  FUNCTIONS   */
 
+           /* elementary Functions that are used many times */
+
+           function currentBet() {
+            balance.innerHTML = 'Your balance: ' + actualBalance + '$, current bet is: ' + gold + '$';
+           }
+
+           /* Main functions */
+
            function bet() {
             gold = document.getElementById('goldAmount').value;
             if (gold ==undefined || gold ==null){
@@ -22,11 +32,14 @@
                 alert('Wrong amount of money!');
                 return;
             }
-            balance.innerHTML = 'Your balance: ' + actualBalance + '$, current bet is: ' + gold;
+            currentBet()
             console.log(gold);
         }
 
            function oneTap () {
+               if (actualBalance ==0 || gold ==0){
+                   return;
+               }
             const result = document.getElementById('messages2');
                if ((nr == 1 && randomNumber == 1) || (nr == 2 && randomNumber == 2)|| (nr == 3 && randomNumber == 3)|| (nr ==4 && randomNumber ==4)|| (nr == 5 && randomNumber == 5)|| (nr == 6 && randomNumber == 6)) {
                 result.classList.remove('resultLose');
@@ -42,9 +55,8 @@
                    clearMessages2();
                    printMessage2('Buuuda, try again');
                }
-               balance.innerHTML = 'Your balance: ' + actualBalance + '$, current bet is: ' + gold;
+               currentBet();
            }
-          
 
         function chooseNumber(nr) {
             if (nr==1){
@@ -62,18 +74,11 @@
             } 
         }
 
-           function getGoldAmount (goldAmount){
-         //   let enteredMoney = goldAmount.getAttribute('value');
-          //  console.log(enteredMoney);
-           }
-
-           goldAmount.addEventListener('click', function(){getGoldAmount(goldAmount)});
-           console.log(goldAmount);
-
-
 function roll () {
     if (gold ==undefined || gold ==null){
         gold = 0;
+    } else if (actualBalance ==0 || gold ==0){
+        return;
     }
     if ((gold > actualBalance) || (gold < 0) || (gold== undefined)){
         return;
@@ -111,7 +116,6 @@ function clearMessages2(){
 
                 /* METHODS   */
 
-
 balance.innerHTML = 'Your balance: ' + actualBalance + '$';
 rollButton.addEventListener('click', function(){roll()});
 rollButton.addEventListener('click', function(){oneTap()});
@@ -123,5 +127,6 @@ playerChoice[4].addEventListener('click', function(){chooseNumber(nr = 5)});
 playerChoice[5].addEventListener('click', function(){chooseNumber(nr = 6)});
 goldAmount.addEventListener('change', function(){bet()});
 console.log(nr);
+console.log(goldAmount);
 //console.log(chosenNr);
 console.log(playerChoice);
